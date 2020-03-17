@@ -18,4 +18,8 @@
         </environment>
     </environments>
 
+    <mappers>
+        <mapper class="testMapper"/>
+    </mappers>
+
 </configuration>
