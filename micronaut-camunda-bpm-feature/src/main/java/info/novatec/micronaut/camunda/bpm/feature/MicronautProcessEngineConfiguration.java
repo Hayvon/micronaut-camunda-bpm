@@ -1,5 +1,6 @@
 package info.novatec.micronaut.camunda.bpm.feature;
 
+import io.micronaut.aop.Introduction;
 import io.micronaut.cli.io.support.PathMatchingResourcePatternResolver;
 import io.micronaut.cli.io.support.Resource;
 import io.micronaut.context.ApplicationContext;
@@ -23,14 +24,14 @@ public class MicronautProcessEngineConfiguration {
 
     private final ApplicationContext applicationContext;
 
-    private final Configuration configuration;
+    //private final Configuration configuration;
 
-    private final DatasourceConfiguration datasourceConfiguration;
+   // private final DatasourceConfiguration datasourceConfiguration;
 
-    public MicronautProcessEngineConfiguration(ApplicationContext applicationContext, Configuration configuration, DatasourceConfiguration datasourceConfiguration) {
+    public MicronautProcessEngineConfiguration(ApplicationContext applicationContext) {//, Configuration configuration, DatasourceConfiguration datasourceConfiguration) {
         this.applicationContext = applicationContext;
-        this.configuration = configuration;
-        this.datasourceConfiguration = datasourceConfiguration;
+      //  this.configuration = configuration;
+       // this.datasourceConfiguration = datasourceConfiguration;
     }
 
     /**
@@ -39,7 +40,7 @@ public class MicronautProcessEngineConfiguration {
      * @return the initialized {@link ProcessEngine} in the application context.
      * @throws IOException if a resource, i.e. a model, cannot be loaded.
      */
-    @Context
+   /* @Context
     public ProcessEngine processEngine() throws IOException {
         ProcessEngineConfiguration processEngineConfiguration = ProcessEngineConfiguration.createStandaloneProcessEngineConfiguration()
                 .setDatabaseSchemaUpdate(configuration.getDatabase().getSchemaUpdate())
@@ -53,6 +54,21 @@ public class MicronautProcessEngineConfiguration {
 
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         log.info("Successfully created process engine which is connected to database {}", datasourceConfiguration.getUrl());
+
+        deployProcessModels(processEngine);
+
+        return processEngine;
+    }*/
+    @Context
+    public ProcessEngine processEngine() throws IOException {
+        ProcessEngineConfiguration processEngineConfiguration = ProcessEngineConfiguration.createStandaloneInMemProcessEngineConfiguration()
+                .setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_TRUE)
+                .setJdbcUrl("jdbc:h2:mem:my-own-db;DB_CLOSE_DELAY=1000")
+                .setJobExecutorActivate(true);
+
+        ((ProcessEngineConfigurationImpl)processEngineConfiguration).setExpressionManager(new MicronautExpressionManager(new ApplicationContextElResolver(applicationContext)));
+
+        ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
 
         deployProcessModels(processEngine);
 
