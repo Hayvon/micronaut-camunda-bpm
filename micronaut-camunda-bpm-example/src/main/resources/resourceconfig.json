@@ -53,6 +53,14 @@
     {"pattern":"org/camunda/bpm/engine/impl/mapping/entity/DecisionRequirementsDefinition.xml"},
     {"pattern":"org/camunda/bpm/engine/impl/mapping/entity/Property.xml"},
     {"pattern":"org/camunda/bpm/engine/impl/mapping/entity/Statistics.xml"},
-    {"pattern":"org/camunda/bpm/engine/impl/mapping/entity/DecisionDefinition.xml"}
+    {"pattern":"org/camunda/bpm/engine/impl/mapping/entity/DecisionDefinition.xml"},
+    {"pattern":"org/camunda/bpm/engine/db/create/activiti.h2.create.engine.sql"},
+    {"pattern":"org/camunda/bpm/engine/db/create/activiti.h2.create.case.engine.sql"},
+    {"pattern":"org/camunda/bpm/engine/db/create/activiti.h2.create.decision.engine.sql"},
+    {"pattern":"org/camunda/bpm/engine/db/create/activiti.h2.create.decision.history.sql"},
+    {"pattern":"org/camunda/bpm/engine/db/create/activiti.h2.create.history.sql"},
+    {"pattern":"org/camunda/bpm/engine/db/create/activiti.h2.create.identity.sql"},
+    {"pattern":"org/camunda/bpm/engine/db/create/activiti.h2.create.case.history.sql"}
+
   ]
 }
