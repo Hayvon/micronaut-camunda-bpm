@@ -296,8 +296,6 @@
     "name": "org.apache.ibatis.reflection.MetaClass",
     "allPublicMethods": true
   },
-
-
   {
     "name":"org.h2.engine.Engine",
     "methods":[{"name":"getInstance","parameterTypes":[] }]
@@ -350,8 +348,2048 @@
     "name":"org.h2.store.fs.FilePathZip",
     "methods":[{"name":"<init>","parameterTypes":[] }]
   },
+  {
+    "name": "org.apache.ibatis.io.ClassLoaderWrapper",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.apache.ibatis.io.Resources",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.apache.ibatis.type.TypeAliasRegistry",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "java.lang.Class",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredClasses" : true,
+    "allPublicClasses" : true
+  },
+  {
+    "name" : "java.lang.String",
+    "fields" : [
+      { "name" : "value", "allowWrite" : true },
+      { "name" : "hash" }
+    ],
+    "methods" : [
+      { "name" : "<init>", "parameterTypes" : [] },
+      { "name" : "<init>", "parameterTypes" : ["char[]"] },
+      { "name" : "charAt" },
+      { "name" : "format", "parameterTypes" : ["java.lang.String", "java.lang.Object[]"] }
+    ]
+  },
+  {
+    "name" : "java.lang.String$CaseInsensitiveComparator",
+    "methods" : [
+      { "name" : "compare" }
+    ]
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.AttachmentEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "java.util.Map",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.db.ListQueryParameterObject",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.CommentEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.DeploymentEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.DeploymentQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.ExecutionQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.ProcessInstanceQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+  "name" : "org.camunda.bpm.engine.impl.persistence.entity.GroupEntity",
+  "allPublicConstructors": true,
+  "allPublicMethods": true
+},
+  {
+    "name" : "org.camunda.bpm.engine.impl.GroupQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+  "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricActivityInstanceEntity",
+  "allPublicConstructors": true,
+  "allPublicMethods": true
+},
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricActivityInstanceEventEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricActivityInstanceQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricActivityInstanceQueryProperty",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+  "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricActivityStatisticsImpl",
+  "allPublicConstructors": true,
+  "allPublicMethods": true
+},
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricActivityStatisticsImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricActivityStatisticsQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.batch.history.HistoricBatchEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricBatchManager",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+  "name" : "org.camunda.bpm.engine.impl.batch.history.HistoricBatchQueryImpl",
+  "allPublicConstructors": true,
+  "allPublicMethods": true
+},
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricCaseActivityInstanceEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricCaseActivityInstanceEventEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricCaseActivityInstanceEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricCaseActivityInstanceEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricCaseActivityInstanceEventEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricCaseActivityInstanceQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistane.entity.HistoricActivityInstanceManager",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistane.entity.HistoricCaseActivityInstanceManager",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricDetailEventEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricDecisionInstanceStatisticsQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricDecisionOutputInstanceEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricDetailVariableInstanceUpdateEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricDetailEventEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricDetailManager",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricDetailQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricExternalTaskLogEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricExternalTaskLogManager",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricExternalTaskLogQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricFormPropertyEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricFormPropertyEventEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricIdentityLinkLogEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricIdentityLinkLogEventEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricIdentityLinkLogManager",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricIdentityLinkLogQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricIncidentEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricIncidentEventEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricIncidentManager",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+  "name" : "org.camunda.bpm.engine.impl.HistoricIncidentQueryImpl",
+  "allPublicConstructors": true,
+  "allPublicMethods": true
+},
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricJobLogEvent",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
 
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricJobLogEventEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
 
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricJobLogManager",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricJobLogQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricProcessInstanceEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricProcessInstanceEventEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricProcessInstanceManager",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricProcessInstanceQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricProcessInstanceReportImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricScopeInstanceEvent",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricStatisticsManager",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricTaskInstanceEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricTaskInstanceEventEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricTaskInstanceManager",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricTaskInstanceQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricTaskInstanceReportImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricVariableInstanceEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricVariableInstanceManager",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricVariableQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricVariableUpdateEventEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.AbstractHistoricManager",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.CleanableHistoricBatchesReportResultEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.CleanableHistoricBatchReportImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.CleanableHistoricCaseInstanceReportImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.CleanableHistoricCaseInstanceReportResultEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.CleanableHistoricDecisionInstanceReportImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.CleanableHistoricDecisionInstanceReportResultEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.CleanableHistoricProcessInstanceReportImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.CleanableHistoricProcessInstanceReportResultEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.batch.history.DeleteHistoricBatchCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.cmd.DeleteHistoricCaseInstanceCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.cmd.DeleteHistoricCaseInstancesBulkCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.dmn.batch.DeleteHistoricDecisionInstanceBatchConfigurationJsonConverter",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.dmn.cmd.DeleteHistoricDecisionInstanceByDefinitionIdCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+  "name" : "org.camunda.bpm.engine.impl.dmn.cmd.DeleteHistoricDecisionInstanceByInstanceIdCmd",
+  "allPublicConstructors": true,
+  "allPublicMethods": true
+},
+  {
+    "name" : "org.camunda.bpm.engine.impl.dmn.cmd.DeleteHistoricDecisionInstancesBatchCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.dmn.cmd.DeleteHistoricDecisionInstancesBulkCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.dmn.batch.DeleteHistoricDecisionInstancesJobHandler",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.batch.deletion.DeleteHistoricProcessInstanceBatchConfigurationJsonConverter",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+
+  {
+    "name" : "org.camunda.bpm.engine.impl.cmd.batch.DeleteHistoricProcessInstancesBatchCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.cmd.DeleteHistoricProcessInstancesCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.batch.deletion.DeleteHistoricProcessInstancesJobHandler",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+  "name" : "org.camunda.bpm.engine.impl.cmd.DeleteHistoricTaskInstanceCmd",
+  "allPublicConstructors": true,
+  "allPublicMethods": true
+},
+  {
+    "name" : "org.camunda.bpm.engine.impl.cmd.DeleteHistoricVariableInstanceCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.cmd.DeleteHistoricVariableInstancesByProcessInstanceIdCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.cmd.DeleteHistoricExternalTaskLogErrorDetailsCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.cmd.GetHistoricExternalTaskLogErrorDetailsCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.cmd.GetHistoricJobLogExceptionStacktraceCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.NativeHistoricActivityInstanceQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.NativeHistoricCaseActivityInstanceQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.NativeHistoricCaseInstanceQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricCaseInstanceQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.NativeHistoricProcessInstanceQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.NativeHistoricTaskInstanceQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.NativeHistoricVariableInstanceQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.cmd.optimize.OptimizeCompletedHistoricActivityInstanceQueryCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.cmd.optimize.OptimizeCompletedHistoricProcessInstanceQueryCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.cmd.optimize.OptimizeCompletedHistoricTaskInstanceQueryCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+  "name" : "org.camunda.bpm.engine.impl.cmd.optimize.OptimizeHistoricDecisionInstanceQueryCmd",
+  "allPublicConstructors": true,
+  "allPublicMethods": true
+},
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.optimize.OptimizeHistoricIdentityLinkLogEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.cmd.optimize.OptimizeHistoricIdentityLinkLogQueryCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.cmd.optimize.OptimizeHistoricUserOperationsLogQueryCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.cmd.optimize.OptimizeHistoricVariableUpdateQueryCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.cmd.optimize.OptimizeRunningHistoricActivityInstanceQueryCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.cmd.optimize.OptimizeRunningHistoricProcessInstanceQueryCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.cmd.optimize.OptimizeRunningHistoricTaskInstanceQueryCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.SetRemovalTimeToHistoricBatchesBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.cmd.batch.removaltime.SetRemovalTimeToHistoricBatchesCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.SetRemovalTimeToHistoricDecisionInstancesBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.cmd.batch.removaltime.SetRemovalTimeToHistoricDecisionInstancesCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.SetRemovalTimeToHistoricProcessInstancesBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.cmd.batch.removaltime.SetRemovalTimeToHistoricProcessInstancesCmd",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.cfg.multitenancy.TenantIdProvicerHistoricDecisionInstanceContext",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricCaseInstanceEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+  "name" : "org.camunda.bpm.engine.impl.history.event.HistoricCaseInstanceEventEntity",
+  "allPublicConstructors": true,
+  "allPublicMethods": true
+},
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricCaseActivityStatisticsImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+  "name" : "org.camunda.bpm.engine.impl.HistoricCaseActivityStatisticsQueryImpl",
+  "allPublicConstructors": true,
+  "allPublicMethods": true
+},
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricCaseInstanceEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricCaseInstanceEventEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricCaseInstanceManager",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricCaseInstanceQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricDecisionEvaluationEvent",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricDecisionInputInstanceEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricDecisionInstanceEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricDecisionInstanceManager",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricDecisionInstanceQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricDecisionInstanceStatisticsQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricDecisionOutputInstanceEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricDetailEventEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricDetailManager",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricDetailQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricDetailVariableInstanceUpdateEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricExternalTaskLogEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricExternalTaskLogManager",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricExternalTaskLogQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricFormPropertyEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricFormPropertyEventEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricIdentityLinkLogEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricIdentityLinkLogEventEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricIdentityLinkLogManager",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricIdentityLinkLogQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricIncidentEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricIncidentEventEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricIncidentQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricJobLogEvent",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.IdentityInfoEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricJobLogEventEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricJobLogManager",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricJobLogQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricProcessInstanceEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricProcessInstanceEventEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+  "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricProcessInstanceManager",
+  "allPublicConstructors": true,
+  "allPublicMethods": true
+},
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricProcessQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricProcessReportImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricScopeInstanceEvent",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricStatisticsManager",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricTaskInstanceEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.HistoricTaskInstanceEventEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricTaskInstanceManager",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricTaskInstanceQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricTaskInstanceReportImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricVariableInstanceEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.HistoricVariableInstanceManager",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.HistoricVariableInstanceQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.TaskReportImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.TaskReportManager",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.TaskReportResultEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.TaskReportResultEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.history.event.UserOperationLogEntryEventEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.UserOperationLogQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+  "name" : "org.camunda.bpm.engine.variable.impl.type.AbstractValueTypeImpl",
+  "allPublicConstructors": true,
+  "allPublicMethods": true
+},
+  {
+    "name" : "org.camunda.bpm.engine.impl.AbstractVariableQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.pvm.process.ActivityImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.ActivityInstanceImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.ActivityStatisticsImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.ActivityStatisticsQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.AuthorizationQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.AuthorizationServiceImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.batch.BatchQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+  "name" : "org.camunda.bpm.engine.impl.batch.BatchStatisticsQueryImpl",
+  "allPublicConstructors": true,
+  "allPublicMethods": true
+},
+  {
+    "name" : "org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.ConditionEvaluationBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+  "name" : "org.camunda.bpm.engine.impl.identity.db.DbGroupQueryImpl",
+  "allPublicConstructors": true,
+  "allPublicMethods": true
+},
+  {
+    "name" : "org.camunda.bpm.engine.impl.identity.db.DbTenantQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.identity.db.DbUserQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.dmn.entity.repository.DecisionDefinitionQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.dmn.DecisionEvaluationBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.DecisionInstanceStatisticsImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.dmn.entity.repository.DecisionRequirementsDefinitionQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.DecisionServiceImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.dmn.DecisionTableEvaluationBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.identity.DefaultPasswordPolicyImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.variable.listener.DelegateCaseVariableInstanceImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.repository.DeleteProcessDefinitionsBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.repository.DeploymentBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.DeploymentQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.DeploymentStatisticsQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.delegate.DmnDecisionEvaluationEventImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.DmnDecisionImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.delegate.DmnDecisionLiteralExpressionEvaluationEventImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.DmnDecisionLiteralExpressionImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.DmnDecisionRequirementsGraphImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.DmnDecisionResultEntriesImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.DmnDecisionResultImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.DmnDecisionRuleResultImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.delegate.DmnDecisionTableEvaluationEventImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.DmnDecisionTableImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.DmnDecisionTableInputImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.DmnDecisionTableOutputImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.DmnDecisionTableResultImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.DmnDecisionTableRuleImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.delegate.DmnEvaluatedDecisionRuleImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.delegate.DmnEvaluatedInputImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.delegate.DmnEvaluatedOutputImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.DmnExpressionImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.type.DmnTypeDefinitionImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.DmnVariableImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.variable.serializer.jpa.EntityManagerSessionImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.event.EventHandlerImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.EventSubscriptionQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.pvm.runtime.ExecutionImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.ExecutionQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.juel.ExpressionFactoryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.ExternalTaskQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.externaltask.ExternalTaskQueryTopicBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.ExternalTaskServiceImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.variable.impl.value.builder.FileValueBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+  "name" : "org.camunda.bpm.engine.variable.impl.value.FileValueImpl",
+  "allPublicConstructors": true,
+  "allPublicMethods": true
+},
+  {
+    "name" : "org.camunda.bpm.engine.variable.impl.type.FileValueTypeImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.filter,FukterQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.FilterServiceImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.form.FormDataImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.form.FormFieldImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.form.FormFieldValidationConstraintImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.form.FormPropertyImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.FormServiceImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.GroupQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.IdentityServiceImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.IncidentQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.JobDefinitionQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.JobQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.externaltask.LockedExternalTaskImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.ManagementServiceImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.MessageCorrelationBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+  "name" : "org.camunda.bpm.engine.impl.runtime.MessageCorrelation.ResultImpl",
+  "allPublicConstructors": true,
+  "allPublicMethods": true
+},
+  {
+    "name" : "org.camunda.bpm.engine.impl.migration.validation.instance.MigratingActivityInstanceValidationReportImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.migration.validation.instance.MigratingProcessInstanceValidationReportImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.migration.validation.instance.MigratingTransitionInstanceValidationReportImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.migration.MigrationInstuctionImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.migration.validation.instruction.MigrationInstructionValidationReportImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.migration.MigrationPlanBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.migration.MigrationPlanExecutionBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.migration.MigrationPlanImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.migration.validation.instruction.MigrationPlanValidationReportImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.ModificationBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.NativeExecutionQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.NativeProcessInstanceQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.NativeTaskQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.NativeUserQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.value.NullValueImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.type.ObjectTypeImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.value.ObjectValueImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.value.builder.ObjectVariableBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.metrics.MetricsQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.identity.PasswordPolicyDigitRuleImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.identity.PasswordPolicyLengthRuleImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.identity.PasswordPolicyLowerCaseRuleImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.identity.PasswordPolicyResultImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.identity.PasswordPolicySpecialCharacterRuleImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.identity.PasswordPolicyUpperCaseRuleImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.variable.impl.value.PrimitiveTypeValueImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.variable.impl.type.PrimitiveValueTypeImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.xml.ProblemImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.repository.ProcessApplicationDeploymentBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistance.entity.ProcessApplicationDeploymentImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.pvm.process.ProcessDefinitionImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.ProcessDefinitionQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+  "name" : "org.camunda.bpm.engine.impl.ProcessDefinitionQueryImpl",
+  "allPublicConstructors": true,
+  "allPublicMethods": true
+},
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.IdentityLinkEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.ProcessDefinitionStatisticsQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistance.entity.ProcessElementInstanceImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.cfg.ProcessEngineConfigurationImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.context.ProcessEngineContextImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.ProcessEngineImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.ProcessEngineInfoImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.ProcessInstanceModificationBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.ProcessInstanceQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.ProcessInstanceWithVariablesImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.runtime.PvmExecutionImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.QueryPropertyImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.RepositoryServiceImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.bpmn.parser.ResourceReportImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.RestartProcessInstanceBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.RuntimeServiceImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.SchemaLogQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.pvm.process.ScopeImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+  "name" : "org.camunda.bpm.engine.impl.value.builder.SerializedObjectValueBuilderImpl",
+  "allPublicConstructors": true,
+  "allPublicMethods": true
+},
+  {
+    "name" : "org.camunda.bpm.engine.impl.ServiceImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+  "name" : "org.camunda.bpm.engine.impl.SignalEventReceivedBuilderImpl",
+  "allPublicConstructors": true,
+  "allPublicMethods": true
+},
+  {
+    "name" : "org.camunda.bpm.engine.impl.form.StartFormDataImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.JobEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.MessageEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.TablePageQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.form.TaskFormDataImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.TaskQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.TaskReportImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.TaskServiceImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.TaskQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.TenantQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.jobexecutor.TimerDeclarationImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.pvm.process.TransitionImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.TransitionInstanceImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.juel.TypeConverterImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.variable.impl.value.UntypedValueImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.cmd.UpdateExternalTaskRetriesBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.juel.SimpleResolver",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.core.variable.scope.SimpleVariableInstance",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.management.UpdateJobDefinitionSuspensionStateBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.management.UpdateJobSuspensionStateBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.EverLivingJobEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+  "name" : "org.camunda.bpm.engine.impl.repository.UpdateProcessDefinitionSuspensionStateBuilderImpl",
+  "allPublicConstructors": true,
+  "allPublicMethods": true
+},
+  {
+    "name" : "org.camunda.bpm.engine.impl.UpdateProcessInstancesSuspensionStateBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.runtime.UpdateProcessInstanceSuspensionStateBuilderImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.UserOperationLogQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.migration.validation.instruction.ValidatingMigrationInstructionImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.variable.serializer.ValueFieldImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.variable.ValueTypeResolverImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.VariableInstanceQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.variable.impl.VariableMapImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.juel.SimpleContext",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.db.sql.SimpleDbSqlSession",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.form.type.SimpleFormFieldType",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.metrics.SimpleBasedProvider",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.UserQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.TimerEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.AcquirableJobEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.AuthorizationEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.ByteArrayEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.CommentEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.DeploymentEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.DeploymentStatisticsEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.DurationReportResultEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.EventSubscriptionEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.IncidentEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.IncidentStatisticsEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.JobDefinitionEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.JobEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.MembershipEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.MessageEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.MeterLogEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.MetricIntervalEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.ProcessDefinitionEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.ProcessDefinitionStatisticsEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.PropertyEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+  "name" : "org.camunda.bpm.engine.impl.persistence.entity.ReportResultEntity",
+  "allPublicConstructors": true,
+  "allPublicMethods": true
+},
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.ResourceEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.SchemaLogEntryEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.TaskCountByCandidateGroupResultEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.TaskEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.TaskReportResultEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.TenantEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.TenantMembershipEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.TimerEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.UserEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.VariableInstanceEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.batch.BatchStatisticsEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.ExternalTaskEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.FilterEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+  "name" : "org.camunda.bpm.engine.impl.persistence.entity.GroupEntity",
+  "allPublicConstructors": true,
+  "allPublicMethods": true
+},
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.IncidentEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.IncidentStatisticsEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.JobDefinitionEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.MembershipEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.MessageEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.MeterLogEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.MetricIntervallEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.ProcessDefinitionEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.ProcessDefinitionStatisticsEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.PopertyEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.ReportResultEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.ResourceEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.SchemaLogEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.TaskCountByCandidateGroupResultEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.TaskEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.TaskReportResultEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.TenantEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.TenantMembershipEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.TimerEntity",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.filter.FilterQueryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
   {
     "name": "org.camunda.bpm.engine.impl.cfg.ConfigurationLogger",
     "methods": [

@@ -50,6 +50,9 @@
     {"pattern":"org/camunda/bpm/engine/impl/mapping/entity/HistoricDecisionInstance.xml"},
     {"pattern":"org/camunda/bpm/engine/impl/mapping/entity/HistoricDecisionInputInstance.xml"},
     {"pattern":"org/camunda/bpm/engine/impl/mapping/entity/HistoricDecisionOutputInstance.xml"},
-    {"pattern":"org/camunda/bpm/engine/impl/mapping/entity/DecisionRequirementsDefinition.xml"}
+    {"pattern":"org/camunda/bpm/engine/impl/mapping/entity/DecisionRequirementsDefinition.xml"},
+    {"pattern":"org/camunda/bpm/engine/impl/mapping/entity/Property.xml"},
+    {"pattern":"org/camunda/bpm/engine/impl/mapping/entity/Statistics.xml"},
+    {"pattern":"org/camunda/bpm/engine/impl/mapping/entity/DecisionDefinition.xml"}
   ]
 }
