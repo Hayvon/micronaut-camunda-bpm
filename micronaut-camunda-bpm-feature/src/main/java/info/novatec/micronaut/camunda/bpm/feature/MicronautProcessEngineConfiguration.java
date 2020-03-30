@@ -12,7 +12,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.inject.Singleton;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
 @Factory
@@ -79,14 +84,29 @@ public class MicronautProcessEngineConfiguration {
         PathMatchingResourcePatternResolver resourceLoader = new PathMatchingResourcePatternResolver();
         // Order of extensions has been chosen as a best fit for inter process dependencies.
         for (String extension : Arrays.asList("dmn", "cmmn", "bpmn")) {
-            for (Resource resource : resourceLoader.getResources(CLASSPATH_ALL_URL_PREFIX +  "**/*." + extension)) {
+            for (Resource resource : resourceLoader.getResources("classpath*:bpm/helloworld.bpmn")) {
                 log.info("Deploying model from classpath: {}", resource.getFilename());
+
+               /* StringBuilder textBuilder = new StringBuilder();
+                try (Reader reader = new BufferedReader(new InputStreamReader
+                        (resource.getInputStream(), Charset.forName(StandardCharsets.UTF_8.name())))) {
+                    int c = 0;
+                    while ((c = reader.read()) != -1) {
+                        textBuilder.append((char) c);
+                    }
+                }
+                String text = textBuilder.toString();*/
+
                 processEngine.getRepositoryService().createDeployment()
                         .name(MICRONAUT_AUTO_DEPLOYMENT_NAME)
+                        //.addString("helloworld.bpmn", text)
                         .addInputStream(resource.getFilename(), resource.getInputStream())
                         .deploy();
             }
+            log.info("Output: " + Arrays.toString(resourceLoader.getResources("classpath*:bpm/*." + extension)));
         }
+
+
     }
 
     /**

@@ -7,10 +7,3 @@ WORKDIR /home/app/micronaut
 RUN native-image -jar build/app.jar
 EXPOSE 8080
 ENTRYPOINT ["./micronaut", "-Xmx512m"]
-
-##Not working
-##FROM frolvlad/alpine-glibc
-##RUN apk add lib32stdc++6
-#EXPOSE 9080
-#COPY --from=builder /home/app/micronaut /app/micronaut
-#ENTRYPOINTdocker ["/app/micronaut/micronaut", "-Xmx512m"]

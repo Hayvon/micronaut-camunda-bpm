@@ -1697,11 +1697,6 @@
     "allPublicMethods": true
   },
   {
-    "name" : "org.camunda.bpm.engine.impl.persistence.entity.JobEntity",
-    "allPublicConstructors": true,
-    "allPublicMethods": true
-  },
-  {
     "name" : "org.camunda.bpm.engine.impl.persistence.entity.MessageEntity",
     "allPublicConstructors": true,
     "allPublicMethods": true
@@ -1908,11 +1903,6 @@
   },
   {
     "name" : "org.camunda.bpm.engine.impl.persistence.entity.IncidentStatisticsEntity",
-    "allPublicConstructors": true,
-    "allPublicMethods": true
-  },
-  {
-    "name" : "org.camunda.bpm.engine.impl.persistence.entity.JobDefinitionEntity",
     "allPublicConstructors": true,
     "allPublicMethods": true
   },
@@ -2553,6 +2543,31 @@
   },
   {
     "name" : "java.lang.String",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "com.sun.org.apache.xerces.internal.impl.dv.xs.SchemaDVFactoryImpl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "com.sun.org.apache.xerces.internal.impl.dv.XSFacets",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDelegate",
+    "allPublicConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name" : "org.camunda.bpm.engine.impl.persistence.entity.IncidentManager",
     "allPublicConstructors": true,
     "allPublicMethods": true
   },
