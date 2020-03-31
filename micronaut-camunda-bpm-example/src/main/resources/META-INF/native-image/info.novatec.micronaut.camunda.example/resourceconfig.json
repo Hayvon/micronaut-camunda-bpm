@@ -73,7 +73,15 @@
     {"pattern":"org/camunda/bpm/engine/impl/bpmn/parser/DC.xsd"},
     {"pattern":"org/camunda/bpm/engine/impl/bpmn/parser/DI.xsd"},
     {"pattern":"org/camunda/bpm/engine/impl/bpmn/parser/Semantic.xsd"},
+
+
     {"pattern":"bpm/helloworld.bpmn"},
+    {"pattern":"bpm/helloworld2.bpmn"},
+    {"pattern":"bpm/testdir/helloworld3.bpmn"},
+    {"pattern":"bpm/diagrams.txt"},
+
+
+    {"pattern":"bpm/.*/helloworld2.bpmn"},
     {"pattern":"bpm/test/helloworld2.bpmn"}
   ]
 }
