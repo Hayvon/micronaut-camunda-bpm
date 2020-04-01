@@ -7,21 +7,45 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @ConfigurationProperties("datasources.default")
-public interface DatasourceConfiguration {
-
-    @Bindable(defaultValue = "jdbc:h2:mem:micronaut-db;DB_CLOSE_DELAY=1000")
+public class DatasourceConfiguration {
     @NotBlank
-    String getUrl();
-
-    @Bindable(defaultValue = "sa")
+    private String url;
     @NotBlank
-    String getUsername();
-
-    @Bindable(defaultValue = "")
+    private String username;
     @NotNull
-    String getPassword();
-
-    @Bindable(defaultValue = "org.h2.Driver")
+    private String password;
     @NotBlank
-    String getDriverClassName();
+    private String driverClassName;
+
+    //@Bindable(defaultValue = "jdbc:h2:mem:micronaut-db;DB_CLOSE_DELAY=1000")
+    String getUrl() {
+        if (url == null){
+            url = "jdbc:h2:mem:micronaut-db;DB_CLOSE_DELAY=1000";
+        }
+        return url;
+    }
+
+    //@Bindable(defaultValue = "sa")
+    String getUsername() {
+        if (username == null){
+            username = "sa";
+        }
+        return username;
+    }
+
+    //@Bindable(defaultValue = "")
+    String getPassword() {
+        if (password== null){
+            password = "";
+        }
+        return password;
+    }
+
+    //@Bindable(defaultValue = "org.h2.Driver")
+    String getDriverClassName() {
+        if (driverClassName == null){
+            driverClassName = "org.h2.Driver";
+        }
+        return driverClassName;
+    }
 }

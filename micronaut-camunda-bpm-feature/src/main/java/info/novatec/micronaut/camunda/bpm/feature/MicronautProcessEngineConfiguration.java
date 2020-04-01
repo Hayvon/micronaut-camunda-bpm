@@ -29,14 +29,14 @@ public class MicronautProcessEngineConfiguration {
 
     private final ApplicationContext applicationContext;
 
-    //private final Configuration configuration;
+   private final Configuration configuration;
 
-   // private final DatasourceConfiguration datasourceConfiguration;
+   private final DatasourceConfiguration datasourceConfiguration;
 
-    public MicronautProcessEngineConfiguration(ApplicationContext applicationContext) {//, Configuration configuration, DatasourceConfiguration datasourceConfiguration) {
+    public MicronautProcessEngineConfiguration(ApplicationContext applicationContext, Configuration configuration, DatasourceConfiguration datasourceConfiguration) {
         this.applicationContext = applicationContext;
-      //  this.configuration = configuration;
-       // this.datasourceConfiguration = datasourceConfiguration;
+        this.configuration = configuration;
+        this.datasourceConfiguration = datasourceConfiguration;
     }
 
     /**
@@ -45,7 +45,7 @@ public class MicronautProcessEngineConfiguration {
      * @return the initialized {@link ProcessEngine} in the application context.
      * @throws IOException if a resource, i.e. a model, cannot be loaded.
      */
-   /* @Context
+    @Context
     public ProcessEngine processEngine() throws IOException {
         ProcessEngineConfiguration processEngineConfiguration = ProcessEngineConfiguration.createStandaloneProcessEngineConfiguration()
                 .setDatabaseSchemaUpdate(configuration.getDatabase().getSchemaUpdate())
@@ -63,7 +63,8 @@ public class MicronautProcessEngineConfiguration {
         deployProcessModels(processEngine);
 
         return processEngine;
-    }*/
+    }
+    /*
     @Context
     public ProcessEngine processEngine() throws IOException {
         ProcessEngineConfiguration processEngineConfiguration = ProcessEngineConfiguration.createStandaloneInMemProcessEngineConfiguration()
@@ -78,7 +79,7 @@ public class MicronautProcessEngineConfiguration {
         deployProcessModels(processEngine);
 
         return processEngine;
-    }
+    }*/
 
     private void deployProcessModels(ProcessEngine processEngine) throws IOException {
         PathMatchingResourcePatternResolver resourceLoader = new PathMatchingResourcePatternResolver();
@@ -107,8 +108,6 @@ public class MicronautProcessEngineConfiguration {
                         .deploy();
             }
         }
-
-
     }
 
     /**
