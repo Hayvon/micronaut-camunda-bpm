@@ -1,0 +1,3 @@
+helloworld2.bpmn
+helloworld3.bpmn
+testdir/helloworld.bpmn

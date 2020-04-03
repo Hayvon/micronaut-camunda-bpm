@@ -19,9 +19,9 @@ class ProcessTest {
     @Inject
     LoggerDelegate loggerDelegate;
 
-    @Test
+  /*  @Test
     public void verifyBeanInvocationInServiceTask() {
         runtimeService.startProcessInstanceByKey("HelloWorld");
         verify(loggerDelegate).execute(any(DelegateExecution.class));
-    }
+    }*/
 }

@@ -11,7 +11,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.inject.Singleton;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
 @Factory
@@ -20,6 +25,8 @@ public class MicronautProcessEngineConfiguration {
     private static final Logger log = LoggerFactory.getLogger(MicronautProcessEngineConfiguration.class);
     public static final String MICRONAUT_AUTO_DEPLOYMENT_NAME = "MicronautAutoDeployment";
     public static final String CLASSPATH_ALL_URL_PREFIX = "classpath*:";
+    private int diagramcount;
+    private String[] diagrams;
 
     private final ApplicationContext applicationContext;
 
@@ -61,14 +68,29 @@ public class MicronautProcessEngineConfiguration {
 
     private void deployProcessModels(ProcessEngine processEngine) throws IOException {
         PathMatchingResourcePatternResolver resourceLoader = new PathMatchingResourcePatternResolver();
-        // Order of extensions has been chosen as a best fit for inter process dependencies.
-        for (String extension : Arrays.asList("dmn", "cmmn", "bpmn")) {
-            for (Resource resource : resourceLoader.getResources(CLASSPATH_ALL_URL_PREFIX +  "**/*." + extension)) {
+        StringBuilder textBuilder = new StringBuilder();
+
+        for(Resource allDiagramsFile : resourceLoader.getResources(CLASSPATH_ALL_URL_PREFIX +"bpm/diagrams.txt")){
+            try (Reader reader = new BufferedReader(new InputStreamReader
+                    (allDiagramsFile.getInputStream(), Charset.forName(StandardCharsets.UTF_8.name())))) {
+                int c = 0;
+                while ((c = reader.read()) != -1) {
+                    textBuilder.append((char) c);
+                }
+            }
+            String stringinput = textBuilder.toString();
+            diagrams = stringinput.split("\\r?\\n");
+            diagramcount = diagrams.length;
+        }
+
+        for (int i = 0; i < diagramcount; i++) {
+            for (Resource resource : resourceLoader.getResources(CLASSPATH_ALL_URL_PREFIX +"bpm/" + diagrams[i])) {
                 log.info("Deploying model from classpath: {}", resource.getFilename());
+
                 processEngine.getRepositoryService().createDeployment()
                         .name(MICRONAUT_AUTO_DEPLOYMENT_NAME)
                         .addInputStream(resource.getFilename(), resource.getInputStream())
-                        .enableDuplicateFiltering(true)
+                        //.enableDuplicateFiltering(true)
                         .deploy();
             }
         }

@@ -1,22 +1,32 @@
 package info.novatec.micronaut.camunda.bpm.feature;
 
 import io.micronaut.context.annotation.ConfigurationProperties;
-import io.micronaut.core.bind.annotation.Bindable;
-
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+
 @ConfigurationProperties("camunda.bpm")
-public interface Configuration {
+public class Configuration {
 
     @NotNull
-    Database getDatabase();
+    private Database database = new Database();
+
+    Database getDatabase() {
+        return database;
+    }
 
     @ConfigurationProperties("database")
-    interface Database {
+    class Database {
 
         @NotBlank
-        @Bindable(defaultValue = "true")
-        String getSchemaUpdate();
+        private String schemaUpdate;
+
+        //@Bindable(defaultValue = "true")
+        String getSchemaUpdate() {
+            if (schemaUpdate == null){
+                schemaUpdate = "true";
+            }
+            return schemaUpdate;
+        }
     }
 }
