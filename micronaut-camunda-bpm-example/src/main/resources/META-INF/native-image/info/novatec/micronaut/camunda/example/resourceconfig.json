@@ -71,6 +71,13 @@
     {"pattern":"org/camunda/bpm/engine/db/create/activiti.h2.create.case.history.sql"},
 
     {"pattern":"org/camunda/bpm/engine/impl/bpmn/parser/BPMN20.xsd"},
+    {"pattern":"BPMN20.xsd"},
+    {"pattern":"BPMNDI.xsd"},
+    {"pattern":"DC.xsd"},
+    {"pattern":"DI.xsd"},
+    {"pattern":"Semantic.xsd"},
+
+
     {"pattern":"org/camunda/bpm/engine/impl/bpmn/parser/activiti-bpmn-externsions-5.0.xsd"},
     {"pattern":"org/camunda/bpm/engine/impl/bpmn/parser/activiti-bpmn-externsions-5.2.xsd"},
     {"pattern":"org/camunda/bpm/engine/impl/bpmn/parser/activiti-bpmn-externsions-5.3.xsd"},
