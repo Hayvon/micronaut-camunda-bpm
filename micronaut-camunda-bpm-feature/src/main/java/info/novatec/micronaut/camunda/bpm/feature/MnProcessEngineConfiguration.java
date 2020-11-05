@@ -83,6 +83,13 @@ public class MnProcessEngineConfiguration extends StandaloneProcessEngineConfigu
 
     @Override
     protected void initJobExecutor(){
+        //SimpleAsyncTaskExecutor simpleAsyncTaskExecutor = new SimpleAsyncTaskExecutor();
+        //ThreadPoolJobExecutor threadPoolJobExecutor = new ThreadPoolJobExecutor();
+        //SyncTaskExecutor syncTaskExecutor = new SyncTaskExecutor();
+        //MnJobExecutor2 mnJobExecutor2 = new MnJobExecutor2();
+        //mnJobExecutor2.setTaskExecutor(threadPoolJobExecutor);
+        //JobExecutor jobExecutor = (JobExecutor) mnJobExecutor2;
+
         JobExecutor jobExecutor = new DefaultJobExecutor();
         jobExecutorCustomizer.customize(jobExecutor);
         setJobExecutor(jobExecutor);
