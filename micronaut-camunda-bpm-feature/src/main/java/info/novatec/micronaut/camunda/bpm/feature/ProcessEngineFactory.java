@@ -1,5 +1,6 @@
 package info.novatec.micronaut.camunda.bpm.feature;
 
+import io.micrometer.core.instrument.MeterRegistry;
 import io.micronaut.context.annotation.Bean;
 import io.micronaut.context.annotation.Context;
 import io.micronaut.context.annotation.Factory;
@@ -21,6 +22,8 @@ public class ProcessEngineFactory {
 
     public static final String MICRONAUT_AUTO_DEPLOYMENT_NAME = "MicronautAutoDeployment";
 
+    private MeterRegistry meterRegistry;
+
     private static final Logger log = LoggerFactory.getLogger(ProcessEngineFactory.class);
 
     /**
@@ -32,7 +35,8 @@ public class ProcessEngineFactory {
      */
     @Context
     @Bean(preDestroy = "close")
-    public ProcessEngine processEngine(ProcessEngineConfiguration processEngineConfiguration) throws IOException {
+    public ProcessEngine processEngine(ProcessEngineConfiguration processEngineConfiguration, MeterRegistry meterRegistry) throws IOException {
+        this.meterRegistry = meterRegistry;
 
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
 
@@ -61,6 +65,7 @@ public class ProcessEngineFactory {
                         .addInputStream(resource.getFilename(), resource.getInputStream())
                         .enableDuplicateFiltering(true)
                         .deploy();
+                meterRegistry.counter("test").increment();
             }
         }
     }
