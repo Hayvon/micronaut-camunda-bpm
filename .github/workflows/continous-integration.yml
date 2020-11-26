@@ -5,7 +5,7 @@ name: Continuous Integration
 
 on:
   push:
-    branches: [ master ]
+    branches: [ testGradleParallel ]
   pull_request:
     branches: [ master ]
 
@@ -32,4 +32,4 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
       - name: Build with Gradle Wrapper
-        run: ./gradlew build --warning-mode=fail
+        run: ./gradlew build 
