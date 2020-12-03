@@ -45,9 +45,12 @@ public class MnProcessEngineConfiguration extends StandaloneProcessEngineConfigu
 
     protected final JobExecutorCustomizer jobExecutorCustomizer;
 
-    public MnProcessEngineConfiguration(Configuration configuration, ApplicationContext applicationContext, DataSource dataSource, SynchronousTransactionManager<Connection> transactionManager, ProcessEngineConfigurationCustomizer processEngineConfigurationCustomizer, ArtifactFactory artifactFactory, JobExecutorCustomizer jobExecutorCustomizer, TelemetryRegistry telemetryRegistry) {
+    GenericProperties genericProperties;
+
+    public MnProcessEngineConfiguration(Configuration configuration, ApplicationContext applicationContext, DataSource dataSource, SynchronousTransactionManager<Connection> transactionManager, ProcessEngineConfigurationCustomizer processEngineConfigurationCustomizer, ArtifactFactory artifactFactory, JobExecutorCustomizer jobExecutorCustomizer, TelemetryRegistry telemetryRegistry, GenericProperties genericProperties) {
         this.transactionManager = transactionManager;
         this.jobExecutorCustomizer = jobExecutorCustomizer;
+        this.genericProperties = genericProperties;
         setDataSource(dataSource);
         setTransactionsExternallyManaged(true);
         setDatabaseSchemaUpdate(configuration.getDatabase().getSchemaUpdate());
@@ -55,8 +58,19 @@ public class MnProcessEngineConfiguration extends StandaloneProcessEngineConfigu
         setJobExecutorActivate(true);
         setExpressionManager(new MnExpressionManager(new ApplicationContextElResolver(applicationContext)));
         setArtifactFactory(artifactFactory);
-
         configureTelemetry(configuration, telemetryRegistry);
+
+        /*if (genericProperties.getProperties() == null){
+            System.out.println("Ist null");
+        }else {
+            log.info("Size: " + genericProperties.getProperties().size());
+        }*/
+
+
+        //read out property value
+        //System.out.println(genericProperties.getValue("test"));
+
+        //log.info("Size " + configuration.getGenericProperties().getProperties());
 
         processEngineConfigurationCustomizer.customize(this);
     }
