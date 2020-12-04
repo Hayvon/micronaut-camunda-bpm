@@ -1,4 +1,10 @@
 micronaut:
   application:
     name: micronaut-camunda-example
-camunda.bpm.telemetry.initializeTelemetry: true
+camunda.bpm:
+  telemetry.initializeTelemetry: true
+  generic-properties:
+    ignoreInvalidFields: true
+    properties:
+      a: a
+      c: 2

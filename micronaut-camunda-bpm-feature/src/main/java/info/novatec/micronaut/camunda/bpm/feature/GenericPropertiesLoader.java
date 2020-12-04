@@ -6,26 +6,27 @@ import io.micronaut.context.env.PropertySourceLoader;
 import io.micronaut.core.io.ResourceLoader;
 import io.micronaut.core.order.Ordered;
 
+import javax.inject.Inject;
 import java.io.InputStream;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-/**
- * {@link io.micronaut.context.env.PropertySourceLoader} which sets some default values
- * with lowest precedence.
- *
- * @author Tobias Schäfer
- */
-public class DefaultPropertySourceLoader implements PropertySourceLoader, Ordered {
+
+public class GenericPropertiesLoader implements PropertySourceLoader, Ordered {
 
     /**
      * Position for the system property source loader in the chain.
      */
     private static final int POSITION = Ordered.LOWEST_PRECEDENCE;
 
-    private static final int MAXIMUM_POOL_SIZE = 100;
+
+    HashMap<String, String> test = new HashMap<>();
+
+
+    //Inject config
+
 
     @Override
     public int getOrder() {
@@ -34,13 +35,11 @@ public class DefaultPropertySourceLoader implements PropertySourceLoader, Ordere
 
     @Override
     public Optional<PropertySource> load(String resourceName, ResourceLoader resourceLoader) {
-        // The (Hikari) datasource pool size must be larger than the number of competing threads
-        // so that they don't get blocked while waiting for a connection.
-        System.out.println("Test");
+        System.out.println("Test2");
         return Optional.of(
                 PropertySource.of(
-                        "micronaut-camunda-bpm-defaults",
-                        Collections.singletonMap("datasources.default.maximum-pool-size", MAXIMUM_POOL_SIZE)));
+                        "test",
+                        Collections.unmodifiableMap(test)));
     }
 
 

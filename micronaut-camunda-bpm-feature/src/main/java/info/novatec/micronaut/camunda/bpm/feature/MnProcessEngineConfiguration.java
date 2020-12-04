@@ -3,6 +3,7 @@ package info.novatec.micronaut.camunda.bpm.feature;
 import info.novatec.micronaut.camunda.bpm.feature.tx.MnTransactionContextFactory;
 import info.novatec.micronaut.camunda.bpm.feature.tx.MnTransactionInterceptor;
 import io.micronaut.context.ApplicationContext;
+import io.micronaut.core.util.CollectionUtils;
 import io.micronaut.transaction.SynchronousTransactionManager;
 import org.camunda.bpm.engine.ArtifactFactory;
 import org.camunda.bpm.engine.ProcessEngine;
@@ -21,6 +22,7 @@ import java.sql.Connection;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 import static io.micronaut.transaction.TransactionDefinition.Propagation.REQUIRED;
 import static io.micronaut.transaction.TransactionDefinition.Propagation.REQUIRES_NEW;
@@ -54,6 +56,10 @@ public class MnProcessEngineConfiguration extends ProcessEngineConfigurationImpl
         setArtifactFactory(artifactFactory);
 
         configureTelemetry(configuration, telemetryRegistry);
+
+        //configureGenericProperties(configuration);
+
+        //log.info(configuration.getGenericProperties().getProperties().toString());
 
         processEngineConfigurationCustomizer.customize(this);
     }
@@ -116,4 +122,13 @@ public class MnProcessEngineConfiguration extends ProcessEngineConfigurationImpl
         }
         setTelemetryRegistry(telemetryRegistry);
     }
+
+    private void configureGenericProperties(Configuration configuration){
+        final Map<String, String> properties = configuration.getGenericProperties().getProperties();
+        if (!CollectionUtils.isEmpty(properties)){
+
+        }
+
+    }
+
 }
