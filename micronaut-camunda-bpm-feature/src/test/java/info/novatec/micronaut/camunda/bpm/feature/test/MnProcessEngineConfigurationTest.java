@@ -1,10 +1,14 @@
 package info.novatec.micronaut.camunda.bpm.feature.test;
 
+import info.novatec.micronaut.camunda.bpm.feature.Configuration;
+import io.micronaut.context.ApplicationContext;
+import io.micronaut.context.annotation.Property;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import io.micronaut.transaction.SynchronousTransactionManager;
 import org.camunda.bpm.engine.HistoryService;
 import org.camunda.bpm.engine.RuntimeService;
 import org.camunda.bpm.engine.history.HistoricProcessInstance;
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import javax.inject.Inject;
@@ -109,4 +113,21 @@ class MnProcessEngineConfigurationTest {
 				.processInstanceBusinessKey(businessKey)
 				.list();
 	}
+
+	@MicronautTest
+	@Nested
+	class OverwrittenGenericPropertyValue {
+
+		@Test
+		@Property(name = "camunda.bpm.genericProperties.properties.defaultNumberOfRetries", value = "1")
+		void validGenericProperty(){
+		}
+
+		@Test
+		@Property(name = "camunda.bpm.genericProperties.properties.invalidProperty", value = "1")
+		void invalidGenericProperty(){
+		}
+
+	}
+
 }

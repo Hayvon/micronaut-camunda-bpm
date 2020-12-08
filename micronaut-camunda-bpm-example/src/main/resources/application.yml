@@ -4,7 +4,5 @@ micronaut:
 camunda.bpm:
   telemetry.initializeTelemetry: true
   generic-properties:
-    ignoreInvalidFields: true
     properties:
-      a: a
-      c: 2
+       defaultNumberOfRetries: 1

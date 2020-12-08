@@ -36,7 +36,6 @@ public class DefaultPropertySourceLoader implements PropertySourceLoader, Ordere
     public Optional<PropertySource> load(String resourceName, ResourceLoader resourceLoader) {
         // The (Hikari) datasource pool size must be larger than the number of competing threads
         // so that they don't get blocked while waiting for a connection.
-        System.out.println("Test");
         return Optional.of(
                 PropertySource.of(
                         "micronaut-camunda-bpm-defaults",

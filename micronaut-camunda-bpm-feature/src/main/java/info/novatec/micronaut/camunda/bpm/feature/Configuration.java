@@ -3,6 +3,7 @@ package info.novatec.micronaut.camunda.bpm.feature;
 import io.micronaut.context.annotation.ConfigurationProperties;
 import io.micronaut.core.bind.annotation.Bindable;
 import io.micronaut.core.convert.format.MapFormat;
+import io.micronaut.core.naming.conventions.StringConvention;
 import org.camunda.bpm.engine.ProcessEngineConfiguration;
 
 import javax.validation.constraints.NotBlank;
@@ -48,14 +49,16 @@ public interface Configuration {
     }
 
     @ConfigurationProperties("genericProperties")
-    interface GenericProperties {
-        //TODO: https://github.com/camunda/camunda-bpm-spring-boot-starter/pull/139/commits/db34812f808381ddd2677c44d0722af159a8cb1d
+    class GenericProperties {
+        Map<String, Object> properties = new HashMap<>();
 
-        @MapFormat(transformation = MapFormat.MapTransformation.FLAT)
-        Map<String, String> properties = new HashMap<>();
+        public void setProperties(@MapFormat(transformation = MapFormat.MapTransformation.FLAT, keyFormat = StringConvention.CAMEL_CASE) Map<String, Object> properties) {
+            this.properties = properties;
+        }
 
-        public Map<String, String> getProperties();
-
+        public Map<String, Object> getProperties() {
+            return properties;
+        }
     }
 
 }

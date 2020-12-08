@@ -3,7 +3,9 @@ package info.novatec.micronaut.camunda.bpm.feature;
 import info.novatec.micronaut.camunda.bpm.feature.tx.MnTransactionContextFactory;
 import info.novatec.micronaut.camunda.bpm.feature.tx.MnTransactionInterceptor;
 import io.micronaut.context.ApplicationContext;
-import io.micronaut.core.util.CollectionUtils;
+import io.micronaut.core.annotation.Introspected;
+import io.micronaut.core.beans.BeanIntrospection;
+import io.micronaut.core.beans.BeanProperty;
 import io.micronaut.transaction.SynchronousTransactionManager;
 import org.camunda.bpm.engine.ArtifactFactory;
 import org.camunda.bpm.engine.ProcessEngine;
@@ -19,10 +21,7 @@ import org.slf4j.LoggerFactory;
 import javax.inject.Singleton;
 import javax.sql.DataSource;
 import java.sql.Connection;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static io.micronaut.transaction.TransactionDefinition.Propagation.REQUIRED;
 import static io.micronaut.transaction.TransactionDefinition.Propagation.REQUIRES_NEW;
@@ -36,6 +35,7 @@ import static io.micronaut.transaction.TransactionDefinition.Propagation.REQUIRE
  * @author Lukasz Frankowski
  */
 @Singleton
+@Introspected
 public class MnProcessEngineConfiguration extends ProcessEngineConfigurationImpl {
 
     private static final Logger log = LoggerFactory.getLogger(MnProcessEngineConfiguration.class);
@@ -44,7 +44,7 @@ public class MnProcessEngineConfiguration extends ProcessEngineConfigurationImpl
 
     protected final JobExecutorCustomizer jobExecutorCustomizer;
 
-    public MnProcessEngineConfiguration(Configuration configuration, ApplicationContext applicationContext, DataSource dataSource, SynchronousTransactionManager<Connection> transactionManager, ProcessEngineConfigurationCustomizer processEngineConfigurationCustomizer, ArtifactFactory artifactFactory, JobExecutorCustomizer jobExecutorCustomizer, TelemetryRegistry telemetryRegistry) {
+    public MnProcessEngineConfiguration(Configuration configuration, ApplicationContext applicationContext, DataSource dataSource, SynchronousTransactionManager<Connection> transactionManager, ProcessEngineConfigurationCustomizer processEngineConfigurationCustomizer, ArtifactFactory artifactFactory, JobExecutorCustomizer jobExecutorCustomizer, TelemetryRegistry telemetryRegistry) throws Exception {
         this.transactionManager = transactionManager;
         this.jobExecutorCustomizer = jobExecutorCustomizer;
         setDataSource(dataSource);
@@ -57,9 +57,7 @@ public class MnProcessEngineConfiguration extends ProcessEngineConfigurationImpl
 
         configureTelemetry(configuration, telemetryRegistry);
 
-        //configureGenericProperties(configuration);
-
-        //log.info(configuration.getGenericProperties().getProperties().toString());
+        configureGenericProperties(configuration);
 
         processEngineConfigurationCustomizer.customize(this);
     }
@@ -123,12 +121,19 @@ public class MnProcessEngineConfiguration extends ProcessEngineConfigurationImpl
         setTelemetryRegistry(telemetryRegistry);
     }
 
-    private void configureGenericProperties(Configuration configuration){
-        final Map<String, String> properties = configuration.getGenericProperties().getProperties();
-        if (!CollectionUtils.isEmpty(properties)){
+    private void configureGenericProperties(Configuration configuration) throws Exception {
+        final Map<String, Object> genericProperties = configuration.getGenericProperties().getProperties();
+        final BeanIntrospection<MnProcessEngineConfiguration> introspection = BeanIntrospection.getIntrospection(MnProcessEngineConfiguration.class);
 
+        for(Map.Entry<String, Object > entry : genericProperties.entrySet()){
+            Optional<BeanProperty<MnProcessEngineConfiguration, Object>> property = introspection.getProperty(entry.getKey());
+
+            if (property.isPresent()){
+                property.get().set(this, entry.getValue());
+            }else{
+                throw new Exception("Invalid property: "  + entry.getKey());
+            }
         }
-
     }
 
 }
