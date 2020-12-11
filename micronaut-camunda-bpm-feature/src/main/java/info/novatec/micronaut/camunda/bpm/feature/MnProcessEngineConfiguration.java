@@ -1,5 +1,6 @@
 package info.novatec.micronaut.camunda.bpm.feature;
 
+import camundajar.impl.com.google.gson.internal.Primitives;
 import info.novatec.micronaut.camunda.bpm.feature.tx.MnTransactionContextFactory;
 import info.novatec.micronaut.camunda.bpm.feature.tx.MnTransactionInterceptor;
 import io.micronaut.context.ApplicationContext;
@@ -20,6 +21,7 @@ import org.slf4j.LoggerFactory;
 
 import javax.inject.Singleton;
 import javax.sql.DataSource;
+import java.lang.reflect.Field;
 import java.sql.Connection;
 import java.util.*;
 
@@ -121,15 +123,30 @@ public class MnProcessEngineConfiguration extends ProcessEngineConfigurationImpl
         setTelemetryRegistry(telemetryRegistry);
     }
 
-    private void configureGenericProperties(Configuration configuration) throws Exception {
+    public void configureGenericProperties(Configuration configuration) throws Exception {
         final Map<String, Object> genericProperties = configuration.getGenericProperties().getProperties();
         final BeanIntrospection<MnProcessEngineConfiguration> introspection = BeanIntrospection.getIntrospection(MnProcessEngineConfiguration.class);
 
         for(Map.Entry<String, Object > entry : genericProperties.entrySet()){
             Optional<BeanProperty<MnProcessEngineConfiguration, Object>> property = introspection.getProperty(entry.getKey());
 
-            if (property.isPresent()){
-                property.get().set(this, entry.getValue());
+           if (property.isPresent()){
+               if (entry.getValue().getClass().getTypeName().equals("java.lang.String")) {
+                   //TODO: replace with dynamic cast
+                   switch (property.get().getType().toString()) {
+                       case "int":
+                           property.get().set(this, Integer.valueOf(String.valueOf(entry.getValue())));
+                           break;
+                       case "boolean":
+                           property.get().set(this, Boolean.valueOf(String.valueOf(entry.getValue())));
+                           break;
+                       case "long":
+                           property.get().set(this, Long.valueOf(String.valueOf(entry.getValue())));
+                           break;
+                   }
+               }else{
+                   property.get().set(this, entry.getValue());
+               }
             }else{
                 throw new Exception("Invalid property: "  + entry.getKey());
             }

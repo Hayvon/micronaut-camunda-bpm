@@ -1,19 +1,28 @@
 package info.novatec.micronaut.camunda.bpm.feature.test;
 
+import camundajar.impl.scala.App;
 import info.novatec.micronaut.camunda.bpm.feature.Configuration;
+import info.novatec.micronaut.camunda.bpm.feature.MnProcessEngineConfiguration;
 import io.micronaut.context.ApplicationContext;
 import io.micronaut.context.annotation.Property;
+import io.micronaut.scheduling.annotation.ExecuteOn;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import io.micronaut.transaction.SynchronousTransactionManager;
+import org.camunda.bpm.engine.CaseService;
 import org.camunda.bpm.engine.HistoryService;
+import org.camunda.bpm.engine.ProcessEngineConfiguration;
 import org.camunda.bpm.engine.RuntimeService;
 import org.camunda.bpm.engine.history.HistoricProcessInstance;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import javax.inject.Inject;
 import java.sql.Connection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -118,14 +127,32 @@ class MnProcessEngineConfigurationTest {
 	@Nested
 	class OverwrittenGenericPropertyValue {
 
+		@Inject
+		MnProcessEngineConfiguration mnProcessEngineConfiguration;
+
+		@Inject
+		Configuration configuration;
+
+		Map<String, Object> properties = new HashMap<>();
+
+
+
 		@Test
-		@Property(name = "camunda.bpm.genericProperties.properties.defaultNumberOfRetries", value = "1")
-		void validGenericProperty(){
+		void correctDefaultValue(){
+			assertEquals(3, mnProcessEngineConfiguration.getDefaultNumberOfRetries());
 		}
 
 		@Test
-		@Property(name = "camunda.bpm.genericProperties.properties.invalidProperty", value = "1")
-		void invalidGenericProperty(){
+		@Property(name = "camunda.bpm.generic-properties.properties.defaultNumberOfRetries", value = "1")
+		void validGenericProperty() throws Exception {
+			mnProcessEngineConfiguration.configureGenericProperties(configuration);
+			assertEquals(1, mnProcessEngineConfiguration.getDefaultNumberOfRetries());
+		}
+
+		@Test
+		@Property(name = "camunda.bpm.generic-properties.properties.invalidProperty", value = "1")
+		void invalidGenericProperty() throws Exception {
+			assertThrows(Exception.class, () -> mnProcessEngineConfiguration.configureGenericProperties(configuration));
 		}
 
 	}

@@ -5,4 +5,4 @@ camunda.bpm:
   telemetry.initializeTelemetry: true
   generic-properties:
     properties:
-       defaultNumberOfRetries: 1
+       defaultNumberOfRetries: "1"
